@@ -9,6 +9,7 @@
   background-size: cover;
   flex-direction: column;
   padding: 10vh 20vw;
+  font-family: Roboto, sans-serif;
   .overlay {
     position: absolute;
     width: 100%;
@@ -23,6 +24,8 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    z-index: 1;
+    color: white;
   }
   .main {
     height: 60%;
@@ -45,10 +48,10 @@
         width: 70%;
         height: 50%;
         margin-top: 5vh;
-        font-weight: 500;
-        line-height: 1.1rem;
+        font-weight: 300;
+        line-height: 1.3rem;
+        font-size: 0.9rem;
         letter-spacing: 0.04rem;
-        color: white;
       }
     }
     .contact {
@@ -59,7 +62,6 @@
         height: 40%;
         text-transform: capitalize;
         font-size: 1.2rem;
-        color: white;
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -82,6 +84,36 @@
       width: 100%;
       background-color: grey;
       bottom: 0;
+    }
+  }
+  .sub {
+    height: 35%;
+    width: 100%;
+    .rights {
+      width: 40%;
+      span {
+        text-transform: uppercase;
+        font-size: 0.65rem;
+        font-weight: 600;
+        letter-spacing: 0.25rem;
+      }
+    }
+    .social {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 20%;
+      height: 100%;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        height: 30%;
+        width: 18%;
+        border: 1px solid grey;
+      }
     }
   }
 }

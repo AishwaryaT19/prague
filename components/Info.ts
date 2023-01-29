@@ -212,3 +212,4 @@ export const infs: infoTypes[] = [
   },
 ];
 export const footer = "/assests/images/footer.jpg";
+export const copyright = "copyright of aishwarya tewari 😁";

@@ -1,13 +1,12 @@
 import Link from "next/link";
 import { RiFacebookFill, RiTwitterFill, RiLinkedinFill } from "react-icons/ri";
 import { TfiPinterest } from "react-icons/tfi";
-import { logo, infs, footer } from "./Info";
+import { logo, infs, footer, copyright } from "./Info";
 import Image from "next/image";
 export default function Footer() {
   return (
     <footer id="footer" style={{ backgroundImage: `url("${footer}")` }}>
       <span className="overlay"></span>
-
       <div className="main">
         <div className="info">
           <Link href="/" className="img-container">
@@ -44,23 +43,21 @@ export default function Footer() {
       </div>
       <div className="sub">
         <div className="rights">
-          <span></span>
+          <span>{copyright}</span>
         </div>
         <div className="social">
-          <div className="icons">
-            <Link href="">
-              <RiFacebookFill />
-            </Link>
-            <Link href="">
-              <RiLinkedinFill />
-            </Link>
-            <Link href="">
-              <RiTwitterFill />
-            </Link>
-            <Link href="">
-              <TfiPinterest />
-            </Link>
-          </div>
+          <Link href="">
+            <RiFacebookFill />
+          </Link>
+          <Link href="">
+            <RiLinkedinFill />
+          </Link>
+          <Link href="">
+            <RiTwitterFill />
+          </Link>
+          <Link href="">
+            <TfiPinterest />
+          </Link>
         </div>
       </div>
     </footer>
