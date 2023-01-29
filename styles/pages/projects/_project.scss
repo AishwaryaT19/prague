@@ -1,0 +1,211 @@
+#main {
+  font-family: Roboto, sans-serif;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .head {
+    padding: 15vh 10vw;
+    width: 90%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    & > span {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      color: #575252;
+      text-align: center;
+      letter-spacing: 0.3rem;
+    }
+    h1 {
+      text-transform: capitalize;
+      letter-spacing: 0.1rem;
+      font-size: 3.2rem;
+      font-weight: 900;
+      text-align: center;
+      margin: 10px 0px;
+    }
+    p {
+      color: #575252;
+      text-align: center;
+      width: 77.5%;
+      margin: 10px 0px;
+    }
+    .stuff-container {
+      padding: 75px 0px;
+      width: 100%;
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 40px;
+      & > div {
+        width: 90%;
+        height: 150px;
+        background-color: #d7caca;
+        padding: 48px 15px 38px 50px;
+      }
+      div {
+        position: relative;
+        span {
+          width: 100%;
+          font-size: 0.7rem;
+          text-transform: uppercase;
+          letter-spacing: 0.2rem;
+        }
+        h3 {
+          width: 100%;
+          font-size: 1rem;
+          text-transform: capitalize;
+          margin-top: 5%;
+          font-weight: 300;
+        }
+        &::before {
+          position: absolute;
+          content: "";
+          height: 2px;
+          width: 60px;
+          top: 57px;
+          left: -30px;
+          background-color: black;
+        }
+      }
+    }
+    .socials {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      span {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        color: #575252;
+        text-align: center;
+        font-weight: 500;
+      }
+      .icons {
+        width: 20%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+        a {
+          height: 10%;
+          width: 10%;
+          padding: 3px;
+          border: 1px solid black;
+          text-decoration: none;
+          color: black;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 96%;
+    height: 110vh;
+    img {
+      object-fit: cover;
+    }
+  }
+  .stf-container {
+    width: 100%;
+    height: auto;
+    margin: 8vh 15vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 500px 500px 500px;
+    .img-container {
+      width: 80;
+      height: 100%;
+
+      justify-self: center;
+
+      img {
+        object-fit: cover;
+      }
+      &.ig-one {
+        grid-column: 1 1;
+        grid-row: 1 / span 2;
+      }
+      &.ig-two {
+        grid-column: 2;
+        grid-row: 2 / span 2;
+      }
+    }
+    p {
+      justify-self: center;
+      width: 70%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.1rem;
+      line-height: 2rem;
+      font-weight: 400;
+      color: #7e7d7d;
+      word-wrap: break-word;
+    }
+    .one {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    .two {
+      grid-column: 1;
+      grid-row: 3;
+    }
+  }
+  .imgtwo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 96%;
+    height: 110vh;
+    position: relative;
+    img {
+      object-fit: cover;
+    }
+  }
+  .last {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 96%;
+    height: 105vh;
+    margin: 5vh 0;
+    > div {
+      width: 50%;
+      height: 100%;
+      position: relative;
+      margin: 0 2vw;
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+  .for {
+    margin: 5vh 2vw;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      text-transform: capitalize;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 2rem;
+      font-weight: 400;
+      color: #7e7d7d;
+    }
+  }
+}
