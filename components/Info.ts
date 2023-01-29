@@ -196,3 +196,19 @@ export const testimonials = [
     message: "yooo",
   },
 ];
+export const logo = "/assests/images/logo.png";
+interface infoTypes {
+  inf: string;
+  number: number;
+  email: string;
+  address: string;
+}
+export const infs: infoTypes[] = [
+  {
+    inf: "The company principle of Architecture-Studio is the collective conception. From the very beginning, the practice has believed in the virtues of exchange, crossing ideas, common effort, shared knowledge and enthusiasm.",
+    number: 1234567899,
+    email: "prague-architects@info.com",
+    address: "SRMIST,Ramapuram,Chennai,India",
+  },
+];
+export const footer = "/assests/images/footer.jpg";
