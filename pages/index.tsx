@@ -15,6 +15,7 @@ import {
   testimonials,
   testimonialHeading,
 } from "../components/Info";
+import { FaQuoteLeft } from "react-icons/fa";
 export default function Home() {
   const [testyIndex, setTesyIndex] = useState(0);
 
@@ -123,9 +124,11 @@ export default function Home() {
                       height: `${100 / testimonials.length}%`,
                     }}
                   >
-                    <span>"</span>
+                    <span>
+                      <FaQuoteLeft />
+                    </span>
                     <p>{test.message}</p>
-                    <span>{test.name}</span>
+                    <span className="auth">{test.name}</span>
                   </div>
                 );
               })}

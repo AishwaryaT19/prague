@@ -333,6 +333,7 @@
           min-height: 30px;
           padding-right: 10px;
           background-color: white;
+          color: #7e7d7d;
           cursor: pointer;
           &.testy-active {
             font-weight: bold;
@@ -340,11 +341,38 @@
         }
       }
       .testy-container {
-        background-color: red;
         width: 70%;
         height: 95%;
         overflow: hidden;
+        border: 1px solid grey;
+        box-shadow: 0px 5px 10px #7e7d7d;
         .overflow-container {
+          > div {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            span {
+              font-size: 1.5rem;
+            }
+            p {
+              margin: 5%;
+            }
+            .auth {
+              position: relative;
+              &::after {
+                content: "";
+                position: absolute;
+                height: 0.15rem;
+                width: 1.5rem;
+                background-color: #111;
+                top: calc(50% - 0.15rem);
+                right: calc(100% + 0.5rem);
+              }
+            }
+          }
           transition: all 0.8s ease-in-out;
         }
       }
