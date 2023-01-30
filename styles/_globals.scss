@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .img-container {
   position: relative;
   display: flex;
@@ -18,16 +19,19 @@
 }
 ::-webkit-scrollbar {
   width: 10px;
+  background: rgba(0, 0, 0, 0);
 }
 
 ::-webkit-scrollbar-track {
-  background: white;
+  background: rgba(0, 0, 0, 0);
+  box-shadow: none;
 }
 
 ::-webkit-scrollbar-thumb {
   background: rgba(1, 1, 1, 0.2);
   border: 1px solid grey;
   border-radius: 5px;
+  box-shadow: none;
 }
 
 ::-webkit-scrollbar-thumb:hover {

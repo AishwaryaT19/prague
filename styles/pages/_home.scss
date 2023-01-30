@@ -71,7 +71,7 @@
       position: absolute;
       color: var(--white-col);
       width: 26px;
-      border: 1px solid var(--white-col);
+      border: 0.5px solid var(--white-col);
       top: calc(98% / 2);
       left: -13px;
     }
@@ -337,6 +337,7 @@
           cursor: pointer;
           &.testy-active {
             font-weight: bold;
+            color: var(--black-col);
           }
         }
       }
@@ -344,8 +345,7 @@
         width: 70%;
         height: 95%;
         overflow: hidden;
-        border: 1px solid var(--grey-col);
-        box-shadow: 0px 5px 10px var(--grey-col);
+        box-shadow: 0px 5px 8px var(--grey-col);
         .overflow-container {
           > div {
             display: flex;

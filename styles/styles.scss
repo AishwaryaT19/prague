@@ -1,7 +1,9 @@
 @import "./globals";
+@import "variables";
+
 @import "pages/home";
 @import "pages/about";
 @import "pages/projects/projects";
 @import "pages/projects/project";
 @import "components/footer";
-@import "variables";
+@import "components/header";

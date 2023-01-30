@@ -6,14 +6,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   .head {
-    padding: 15vh 10vw;
-    width: 90%;
+    width: 100%;
     height: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: 10vh;
+    padding: 15vh 8vw;
     & > span {
       font-size: 0.9rem;
       text-transform: uppercase;
@@ -45,7 +47,7 @@
       & > div {
         width: 90%;
         height: 150px;
-        background-color: rgb(166, 154, 154);
+        background-color: #dfdfdf;
         padding: 48px 15px 38px 50px;
       }
       div {
@@ -118,9 +120,9 @@
     }
   }
   .stf-container {
-    width: 100%;
+    width: 98%;
     height: auto;
-    margin: 8vh 15vw;
+    margin: 8vh 5vw;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 500px 500px 500px;
@@ -179,8 +181,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 96%;
-    height: 105vh;
+    width: 100%;
+    height: 90vh;
     margin: 5vh 0;
     > div {
       width: 50%;
@@ -193,7 +195,7 @@
     }
   }
   .for {
-    margin: 5vh 2vw;
+    // margin: 5vh 2vw;
     height: 100%;
     width: 100%;
     display: flex;
