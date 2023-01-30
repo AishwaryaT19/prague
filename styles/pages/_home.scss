@@ -15,7 +15,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    color: white;
+    color: var(--white-col);
     .overlay {
       position: absolute;
       width: 100%;
@@ -51,51 +51,51 @@
     }
     a {
       text-decoration: none;
-      color: white;
+      color: var(--white-col);
       height: 50px;
       width: 200px;
       font-size: 0.85rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 2px solid white;
+      border: 2px solid var(--white-col);
       transition: 0.3s all ease;
       position: relative;
     }
     a:hover {
-      background-color: white;
-      color: black;
+      background-color: var(--white-col);
+      color: var(--black-col);
     }
     a::before {
       content: "";
       position: absolute;
-      color: white;
+      color: var(--white-col);
       width: 26px;
-      border: 1px solid white;
+      border: 1px solid var(--white-col);
       top: calc(98% / 2);
       left: -13px;
     }
     a::after {
       content: "";
       position: absolute;
-      color: white;
+      color: var(--white-col);
       width: 26px;
-      border: 0.5px solid white;
+      border: 0.5px solid var(--white-col);
       top: calc(98% / 2);
       right: -13px;
     }
     a:hover {
-      background-color: white;
-      color: black;
-      border: 2px solid black;
+      background-color: var(--white-col);
+      color: var(--black-col);
+      border: 2px solid var(--black-col);
 
       &::before {
-        color: black;
-        border: 0.5px solid black;
+        color: var(--black-col);
+        border: 0.5px solid var(--black-col);
       }
       &::after {
-        color: black;
-        border: 0.5px solid black;
+        color: var(--black-col);
+        border: 0.5px solid var(--black-col);
       }
     }
   }
@@ -117,13 +117,13 @@
       .shadow {
         width: 370px;
         height: 420px;
-        background-color: white;
+        background-color: var(--white-col);
         z-index: 2;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 15px solid black;
+        border: 15px solid var(--black-col);
         span:nth-child(1) {
           font-size: 11rem;
           font-weight: 700;
@@ -149,7 +149,7 @@
       span {
         font-family: Roboto, sans-serif;
         font-weight: 700;
-        color: #111;
+        color: var(--black-col);
         font-size: 2.5rem;
         line-height: 44px;
       }
@@ -158,7 +158,7 @@
         font-size: 16px;
         line-height: 32px;
         font-weight: 400;
-        color: #7e7d7d;
+        color: var(--grey-col);
         word-wrap: break-word;
       }
     }
@@ -217,14 +217,14 @@
             position: absolute;
             width: 100px;
             height: 1px;
-            background-color: #111;
+            background-color: var(--black-col);
             top: 7px;
             right: 55px;
           }
           .heading {
             font-family: Roboto, sans-serif;
             font-weight: 500;
-            color: #111;
+            color: var(--black-col);
             font-size: 2.3rem;
             line-height: 44px;
             text-decoration: none;
@@ -235,7 +235,7 @@
             font-size: 16px;
             line-height: 32px;
             font-weight: 400;
-            color: #7e7d7d;
+            color: var(--grey-col);
             word-wrap: break-word;
           }
           .link-tag {
@@ -243,7 +243,7 @@
             font-weight: 300;
             margin-top: 20px;
             text-decoration: none;
-            color: black;
+            color: var(--black-col);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -299,7 +299,7 @@
     }
     & > span {
       font-weight: 700;
-      color: #111;
+      color: var(--black-col);
       font-size: 2.5rem;
       line-height: 44px;
       letter-spacing: 0.3rem;
@@ -325,15 +325,15 @@
           position: absolute;
           bottom: 0;
           right: 0;
-          border: 1px solid grey;
+          border: 1px solid var(--grey-col);
           z-index: -1;
         }
         span {
           width: fit-content;
           min-height: 30px;
           padding-right: 10px;
-          background-color: white;
-          color: #7e7d7d;
+          background-color: var(--white-col);
+          color: var(--grey-col);
           cursor: pointer;
           &.testy-active {
             font-weight: bold;
@@ -344,8 +344,8 @@
         width: 70%;
         height: 95%;
         overflow: hidden;
-        border: 1px solid grey;
-        box-shadow: 0px 5px 10px #7e7d7d;
+        border: 1px solid var(--grey-col);
+        box-shadow: 0px 5px 10px var(--grey-col);
         .overflow-container {
           > div {
             display: flex;
@@ -367,7 +367,7 @@
                 position: absolute;
                 height: 0.15rem;
                 width: 1.5rem;
-                background-color: #111;
+                background-color: var(--black-col);
                 top: calc(50% - 0.15rem);
                 right: calc(100% + 0.5rem);
               }
@@ -375,6 +375,22 @@
           }
           transition: all 0.8s ease-in-out;
         }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1200px) {
+  #Home {
+    .about-us {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 10vh;
+      .stuff-container {
+        text-align: center;
+        width: 90%;
+        padding-top: 5vh;
       }
     }
   }

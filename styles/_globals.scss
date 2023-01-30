@@ -16,3 +16,20 @@
     object-fit: cover;
   }
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(1, 1, 1, 0.2);
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: black;
+}
