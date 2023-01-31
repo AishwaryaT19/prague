@@ -24,9 +24,9 @@
     padding: 125px 15vw;
   }
   .main {
-    margin-top: 10vh;
+    // margin-top: 10vh;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     @include display();
     flex-direction: column;
     background-repeat: no-repeat;

@@ -12,7 +12,7 @@ import {
   skills,
   timeline,
   timlineCon,
-} from "components/Info";
+} from "../components/Info";
 import { RiCompasses2Line, RiLightbulbLine } from "react-icons/ri";
 import { FiLayers } from "react-icons/fi";
 

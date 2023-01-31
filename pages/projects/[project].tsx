@@ -1,12 +1,13 @@
-import { projects } from "components/Info";
+import { projects } from "../../components/Info";
 import { useRouter } from "next/router";
-import Error from "components/error";
+import Error from "../../components/error";
 import { RiFacebookFill, RiTwitterFill, RiLinkedinFill } from "react-icons/ri";
 import { TfiPinterest } from "react-icons/tfi";
 import Link from "next/link";
 import Image from "next/image";
 export default function Project() {
   const router = useRouter();
+
   const currentRoute = router.query.project as string;
   let x = 0;
   if (!currentRoute) {

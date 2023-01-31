@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { HiArrowLongRight } from "react-icons/hi2";
 import {
   projects,
@@ -16,9 +16,9 @@ import {
   testimonialHeading,
 } from "../components/Info";
 import { FaQuoteLeft } from "react-icons/fa";
+
 export default function Home() {
   const [testyIndex, setTesyIndex] = useState(0);
-
   return (
     <section id="Home">
       <Head>
