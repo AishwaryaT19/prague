@@ -4,6 +4,7 @@ import Link from "next/link";
 import {
   aboutBackground,
   aboutMain,
+  companyName,
   descContent,
   descHead,
   serHead,
@@ -20,7 +21,7 @@ export default function About() {
   return (
     <section id="About">
       <Head>
-        <title>About Us</title>
+        <title>{companyName} | About Us</title>
       </Head>
       <section
         className="main"

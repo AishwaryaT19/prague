@@ -1,6 +1,7 @@
-import { projects } from "../../components/Info";
+import { projects, companyName } from "../../components/Info";
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
 const newprojectlist = projects;
 const num = 4 - (projects.length % 4);
 for (let i = 0; i < num; i++) {
@@ -10,6 +11,9 @@ for (let i = 0; i < num; i++) {
 export default function Projects() {
   return (
     <div id="projects">
+      <Head>
+        <title>{companyName} | projects</title>
+      </Head>
       <div className="container">
         {newprojectlist.map((pr, index) => {
           console.log(pr.projectName);

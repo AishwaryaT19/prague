@@ -14,6 +14,7 @@ import {
   projectSubHead,
   testimonials,
   testimonialHeading,
+  companyName,
 } from "../components/Info";
 import { FaQuoteLeft } from "react-icons/fa";
 
@@ -22,7 +23,7 @@ export default function Home() {
   return (
     <section id="Home">
       <Head>
-        <title>Home Page</title>
+        <title>{companyName} | Home </title>
       </Head>
       <section
         className="main"

@@ -13,6 +13,7 @@ interface projectTypes {
   projectDescTwo: string;
   madeFor: string;
 }
+export const companyName = "Prague";
 
 export const projects: projectTypes[] = [
   {

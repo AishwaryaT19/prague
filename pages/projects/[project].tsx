@@ -1,10 +1,11 @@
-import { projects } from "../../components/Info";
+import { projects, companyName } from "../../components/Info";
 import { useRouter } from "next/router";
 import Error from "../../components/error";
 import { RiFacebookFill, RiTwitterFill, RiLinkedinFill } from "react-icons/ri";
 import { TfiPinterest } from "react-icons/tfi";
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
 export default function Project() {
   const router = useRouter();
 
@@ -29,6 +30,11 @@ export default function Project() {
   } else {
     return (
       <div id="main">
+        <Head>
+          <title>
+            {companyName} | {projects[x].projectName}
+          </title>
+        </Head>
         <div className="head">
           <span>interior</span>
           <h1>{projects[x].projectName}</h1>
