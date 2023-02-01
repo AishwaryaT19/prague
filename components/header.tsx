@@ -4,6 +4,8 @@ import { logo } from "./Info";
 import Link from "next/link";
 import { useState } from "react";
 import useScrollPosition from "../hooks/useScroll";
+import { FaWhatsapp, FaPhone, FaEnvelope } from "react-icons/fa";
+import { infs } from "./Info";
 export default function Header() {
   const [mobileView, setMobileView] = useState(false);
   const scrollPos = useScrollPosition();
@@ -39,6 +41,29 @@ export default function Header() {
         >
           Projects
         </Link>
+        <div className={`${mobileView ? "open" : "close"} socials`}>
+          <Link
+            className="heading"
+            href={"https://api.whatsapp.com/send?phone=" + infs[0].number + ""}
+            onClick={() => setMobileView(!mobileView)}
+          >
+            <FaWhatsapp />
+          </Link>
+          <Link
+            className="heading"
+            href={"tel:" + infs[0].number}
+            onClick={() => setMobileView(!mobileView)}
+          >
+            <FaPhone />
+          </Link>
+          <Link
+            className="heading"
+            href={"mailto:" + infs[0].email}
+            onClick={() => setMobileView(!mobileView)}
+          >
+            <FaEnvelope />
+          </Link>
+        </div>
       </nav>
       <div
         className={`${mobileView ? "open" : "close"} burger`}

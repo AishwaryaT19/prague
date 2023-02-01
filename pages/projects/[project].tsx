@@ -54,7 +54,10 @@ export default function Project() {
           <div className="socials">
             <span>share project</span>
             <div className="icons">
-              <Link href="">
+              <Link
+                href="{https://www.facebook.com/sharer.php?u=${window.location.href}? 
+            imageurl=${this.state.imageUrl}}"
+              >
                 <RiFacebookFill />
               </Link>
               <Link href="">
