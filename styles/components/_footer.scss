@@ -30,7 +30,7 @@
     color: white;
   }
   .main {
-    height: 60%;
+    height: 65%;
     position: relative;
     > div {
       display: flex;
@@ -48,13 +48,13 @@
         }
       }
       p {
-        width: 70%;
+        width: 75%;
         height: 50%;
         margin-top: 5vh;
         font-weight: 300;
-        line-height: 1.3rem;
+        line-height: 0.3rem;
         font-size: 0.9rem;
-        letter-spacing: 0.04rem;
+        letter-spacing: 0.01rem;
       }
     }
     .contact {
@@ -96,8 +96,8 @@
       width: 40%;
       span {
         text-transform: uppercase;
-        font-size: 0.65rem;
-        font-weight: 600;
+        font-size: 0.5rem;
+        font-weight: 500;
         letter-spacing: 0.25rem;
       }
     }
