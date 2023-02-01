@@ -111,7 +111,7 @@
       width: 40%;
       transition: all 1s ease-in-out;
       background-color: inherit;
-      backdrop-filter: blur(300px);
+      backdrop-filter: blur(100px);
       &.active {
         position: absolute;
         top: 10vh;
