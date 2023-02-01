@@ -10,7 +10,7 @@
   z-index: 3;
   transition: all 0.8s ease;
   &.light {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: 0.3;
   }
   .img-container {
@@ -64,7 +64,7 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-end;
-      background-color: var(--black-col);
+      background-color: rgba(0, 0, 0, 0);
       div {
         height: 2px;
         background-color: var(--white-col);
@@ -83,14 +83,14 @@
       }
       &.open {
         .line-1 {
-          transform: rotate(45deg) translate(3px, 5px);
+          transform: rotate(45deg) translate(3px, 4px);
           width: 100%;
         }
         .line-2 {
           opacity: 0;
         }
         .line-3 {
-          transform: rotate(-45deg) translate(5px, -8px);
+          transform: rotate(-45deg) translate(5px, -7px);
           width: 100%;
         }
       }
@@ -100,5 +100,27 @@
 @media only screen and (max-width: 900px) {
   #header {
     position: fixed;
+    #navigation {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      position: absolute;
+      padding: 5vh 10vw;
+      height: 90vh;
+      width: 40%;
+      transition: all 1s ease-in-out;
+      background-color: inherit;
+      backdrop-filter: blur(500px);
+      &.active {
+        position: absolute;
+        top: 10vh;
+        right: 0;
+      }
+      &.inactive {
+        right: -100%;
+        top: 10vh;
+      }
+    }
   }
 }
