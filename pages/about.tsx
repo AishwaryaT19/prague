@@ -81,7 +81,7 @@ export default function About() {
                 <span>{tm.year}</span>
 
                 <div className="def">
-                  <Link href="/projects">{tm.name}</Link>
+                  <h5>{tm.name}</h5>
                   <span>{tm.desc}</span>
                 </div>
               </div>

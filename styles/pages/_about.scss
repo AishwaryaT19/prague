@@ -179,13 +179,12 @@
           flex-direction: column;
           height: 370px;
           width: calc(100% / 3.7);
-          box-shadow: 2px 10px 30px var(--black-col);
+          box-shadow: 0px 5px 15px var(--black-col);
 
           padding: 20px 30px;
           //   margin: 20px;
 
           background-color: var(--white-col);
-          border: 1px solid var(--grey-col);
           .icon {
             font-size: 3rem;
           }
@@ -302,7 +301,7 @@
           flex-direction: column;
           padding-left: 30px;
 
-          a {
+          h5 {
             font-weight: 500;
             color: var(--black-col);
             font-size: 1.4rem;
@@ -445,7 +444,7 @@
           .def {
             padding-left: 20px;
             width: 70%;
-            a {
+            h5 {
               font-weight: 500;
               font-size: 1.4rem;
             }
