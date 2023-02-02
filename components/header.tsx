@@ -4,16 +4,21 @@ import { logo } from "./Info";
 import Link from "next/link";
 import { useState } from "react";
 import useScrollPosition from "../hooks/useScroll";
+import { useRouter } from "next/router";
 import { FaWhatsapp, FaPhone, FaEnvelope } from "react-icons/fa";
 import { infs } from "./Info";
 export default function Header() {
   const [mobileView, setMobileView] = useState(false);
-  const scrollPos = useScrollPosition();
-  console.log(scrollPos);
+  const [pro, setPro] = useState(false);
+  let scrollPos = useScrollPosition();
   function close() {
     setMobileView(false);
   }
-
+  const router = useRouter();
+  const currentRoute = router.asPath as string;
+  if (currentRoute == "/projects") {
+    scrollPos = 100;
+  }
   return (
     <header id="header" className={scrollPos > 75 ? "dark" : "light"}>
       <Link className="img-container" href="/">
