@@ -15,7 +15,7 @@ export default function Header() {
   }
 
   return (
-    <header id="header" className={scrollPos > 150 ? "dark" : "light"}>
+    <header id="header" className={scrollPos > 75 ? "dark" : "light"}>
       <Link className="img-container" href="/">
         <Image src={logo} alt="back" fill sizes="100%" />
       </Link>

@@ -3,6 +3,7 @@
   width: 100%;
   height: auto;
   .container {
+    padding-top: var(--header-height);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 0px;
