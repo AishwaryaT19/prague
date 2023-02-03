@@ -514,6 +514,13 @@
     }
     .testimonials {
       padding-top: 0;
+      .main-container {
+        .name-container {
+          span {
+            font-size: 0.55rem;
+          }
+        }
+      }
     }
   }
 }
