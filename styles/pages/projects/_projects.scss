@@ -67,6 +67,28 @@
       .card {
         width: 100%;
         height: 30vh;
+        position: relative;
+        .img-container {
+          z-index: 1;
+        }
+        .stuff-container {
+          position: absolute;
+          opacity: 1;
+          display: flex;
+          top: 5%;
+          left: 5%;
+          width: 90%;
+          height: 90%;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          z-index: 2;
+          background-color: rgba(0, 0, 0, 0.4);
+          & > span {
+            color: var(--white-col);
+            text-transform: capitalize;
+          }
+        }
       }
     }
   }

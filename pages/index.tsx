@@ -24,6 +24,11 @@ export default function Home() {
     <section id="Home">
       <Head>
         <title>{companyName} | Home </title>
+        <meta
+          name="description"
+          content={companyName + " | " + abContent}
+          key="desc"
+        />
       </Head>
       <section
         className="main"

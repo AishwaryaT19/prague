@@ -34,6 +34,17 @@ export default function Project() {
           <title>
             {companyName} | {projects[x].projectName}
           </title>
+          <meta
+            name="description"
+            content={
+              companyName +
+              " | " +
+              projects[x].projectName +
+              " | " +
+              projects[x].projectDesc
+            }
+            key="desc"
+          />
         </Head>
         <div className="head">
           <span>interior</span>
@@ -57,7 +68,7 @@ export default function Project() {
               <h3>{projects[x].viszualization}</h3>
             </div>
           </div>
-          <div className="socials">
+          {/* <div className="socials">
             <span>share project</span>
             <div className="icons">
               <Link
@@ -76,7 +87,7 @@ export default function Project() {
                 <TfiPinterest />
               </Link>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="img-container">
           <Image

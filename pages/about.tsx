@@ -22,6 +22,11 @@ export default function About() {
     <section id="About">
       <Head>
         <title>{companyName} | About Us</title>
+        <meta
+          name="description"
+          content={companyName + " | " + descContent}
+          key="desc"
+        />
       </Head>
       <section
         className="main"

@@ -68,6 +68,7 @@
       justify-content: space-between;
       align-items: flex-end;
       background-color: rgba(0, 0, 0, 0);
+      cursor: pointer;
       div {
         height: 2px;
         background-color: var(--white-col);
@@ -111,7 +112,7 @@
       position: absolute;
       padding: 5vh 10vw;
       height: 90vh;
-      width: 40%;
+      width: 60vw;
       transition: all 0.6s ease-in-out;
       background-color: inherit;
       backdrop-filter: blur(100px);

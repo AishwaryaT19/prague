@@ -1,4 +1,4 @@
-import { projects, companyName } from "../../components/Info";
+import { projects, companyName, abContent } from "../../components/Info";
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
@@ -13,6 +13,11 @@ export default function Projects() {
     <div id="projects">
       <Head>
         <title>{companyName} | projects</title>
+        <meta
+          name="description"
+          content={companyName + " | " + abContent}
+          key="desc"
+        />
       </Head>
       <div className="container">
         {newprojectlist.map((pr, index) => {

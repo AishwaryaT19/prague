@@ -16,7 +16,7 @@ export default function Header() {
   }
   const router = useRouter();
   const currentRoute = router.asPath as string;
-  if (currentRoute == "/projects") {
+  if (currentRoute.startsWith("/projects")) {
     scrollPos = 100;
   }
   return (
