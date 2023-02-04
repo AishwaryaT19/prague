@@ -1,7 +1,19 @@
 import Link from "next/link";
-import { RiFacebookFill, RiTwitterFill, RiLinkedinFill } from "react-icons/ri";
+import {
+  RiFacebookFill,
+  RiInstagramFill,
+  RiLinkedinFill,
+} from "react-icons/ri";
 import { TfiPinterest } from "react-icons/tfi";
-import { logo, infs, footer, copyright } from "./Info";
+import {
+  logo,
+  infs,
+  footer,
+  copyright,
+  insta,
+  linkedIn,
+  facebook,
+} from "./Info";
 import Image from "next/image";
 export default function Footer() {
   return (
@@ -46,17 +58,14 @@ export default function Footer() {
           <span>{copyright}</span>
         </div>
         <div className="social">
-          <Link href="">
+          <Link href={facebook} target="_blank" rel="noopener noreferrer">
             <RiFacebookFill />
           </Link>
-          <Link href="">
+          <Link href={linkedIn} target="_blank" rel="noopener noreferrer">
             <RiLinkedinFill />
           </Link>
-          <Link href="">
-            <RiTwitterFill />
-          </Link>
-          <Link href="">
-            <TfiPinterest />
+          <Link href={insta} target="_blank" rel="noopener noreferrer">
+            <RiInstagramFill />
           </Link>
         </div>
       </div>

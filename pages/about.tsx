@@ -4,6 +4,8 @@ import Link from "next/link";
 import {
   aboutBackground,
   aboutMain,
+  about_array,
+  About_company_backgr,
   companyName,
   descContent,
   descHead,
@@ -38,13 +40,13 @@ export default function About() {
       </section>
       <section className="desc">
         <div className="img-container">
-          <Image src="/assests/images/main.jpg" alt="main" fill sizes="100%" />
+          <Image src={About_company_backgr} alt="main" fill sizes="100%" />
         </div>
         <div className="stuff-container">
           <span>ABOUT US</span>
           <h2>{descHead}</h2>
           <p>{descContent}</p>
-          <h4>MY SKILLS</h4>
+          <h4>{about_array}</h4>
           <ul>
             {skills.map((skill, index) => {
               return <li key={index}>{skill}</li>;

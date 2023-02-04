@@ -40,7 +40,7 @@
     .info {
       height: 100%;
       .img-container {
-        height: 30%;
+        height: 25%;
         width: 20%;
 
         img {
@@ -48,12 +48,12 @@
         }
       }
       p {
-        width: 75%;
+        width: 76.5%;
         height: 50%;
         margin-top: 5vh;
         font-weight: 300;
         line-height: 1.5rem;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         letter-spacing: 0.01rem;
       }
     }
@@ -113,8 +113,8 @@
         justify-content: center;
         color: white;
         text-align: center;
-        height: 30%;
-        width: 18%;
+        height: 23%;
+        width: 19%;
         border: 1px solid grey;
       }
     }
@@ -169,6 +169,10 @@
     .sub {
       .social {
         width: 40%;
+        a {
+          width: 16%;
+          height: 31%;
+        }
       }
       .rights {
         span {

@@ -15,6 +15,8 @@ import {
   testimonials,
   testimonialHeading,
   companyName,
+  mainButton,
+  years_of_Experience,
 } from "../components/Info";
 import { FaQuoteLeft } from "react-icons/fa";
 
@@ -38,13 +40,13 @@ export default function Home() {
         <span>{place}</span>
         <h1>{main}</h1>
         <p>{objective}</p>
-        <Link href="/projects">EXPLORE IT</Link>
+        <Link href="/projects">{mainButton}</Link>
       </section>
       <section className="about-us">
         <div className="img-container">
           <Image src="/assests/images/main.jpg" alt="main" fill sizes="100%" />
           <div className="shadow">
-            <span>14</span>
+            <span>{years_of_Experience}</span>
             <span>YEARS</span>
           </div>
         </div>
