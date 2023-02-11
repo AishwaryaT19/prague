@@ -12,11 +12,10 @@ export default function Projects() {
   return (
     <div id="projects">
       <Head>
-        <title>{companyName} | projects</title>
+        <title>{`${companyName} | projects`}</title>
         <meta
           name="description"
           content={companyName + " | " + abContent}
-          key="desc"
         />
       </Head>
       <div className="container">

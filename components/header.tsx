@@ -1,26 +1,27 @@
-import React from "react";
+import React, { useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import { logo } from "./Info";
-import Link from "next/link";
-import { useState } from "react";
+import Link from "next/link"
 import useScrollPosition from "../hooks/useScroll";
-import { useRouter } from "next/router";
 import { FaWhatsapp, FaPhone, FaEnvelope } from "react-icons/fa";
 import { infs } from "./Info";
 export default function Header() {
-  const [mobileView, setMobileView] = useState(false);
-  const [pro, setPro] = useState(false);
-  let scrollPos = useScrollPosition();
-  function close() {
-    setMobileView(false);
-  }
-  const router = useRouter();
-  const currentRoute = router.asPath as string;
-  if (currentRoute.startsWith("/projects")) {
-    scrollPos = 100;
-  }
+  const [mobileView, setMobileView] = useState<boolean>(false);
+  const headerRef = useRef<any>()
+  const scrollCallback = useCallback((scrollPos:number)=>{
+    if(scrollPos>75){
+      (headerRef.current as HTMLElement).classList.add("dark");
+      (headerRef.current as HTMLElement).classList.remove("light")
+      
+    }
+    else{
+      (headerRef.current as HTMLElement).classList.remove("dark");
+      (headerRef.current as HTMLElement).classList.add("light")
+    }
+  },[])
+  useScrollPosition(scrollCallback);
   return (
-    <header id="header" className={scrollPos > 75 ? "dark" : "light"}>
+    <header id="header" className="light" ref={headerRef}>
       <Link className="img-container" href="/">
         <Image src={logo} alt="back" fill sizes="100%" />
       </Link>

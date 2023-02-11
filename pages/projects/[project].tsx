@@ -32,7 +32,7 @@ export default function Project() {
       <div id="main">
         <Head>
           <title>
-            {companyName} | {projects[x].projectName}
+            {`${companyName} | ${projects[x].projectName}`}
           </title>
           <meta
             name="description"
@@ -43,7 +43,6 @@ export default function Project() {
               " | " +
               projects[x].projectDesc
             }
-            key="desc"
           />
         </Head>
         <div className="head">

@@ -1,8 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import { HiArrowLongRight } from "react-icons/hi2";
+import { useState } from "react";
 import {
   projects,
   place,
@@ -16,26 +15,24 @@ import {
   testimonialHeading,
   companyName,
   mainButton,
-  years_of_Experience,
+  years_of_Experience
 } from "../components/Info";
 import { FaQuoteLeft } from "react-icons/fa";
+import dynamic from "next/dynamic";
+// import ProjectCard from "components/home/project-card";
+const ProjectCard = dynamic(() => {
+  return import("components/home/project-card");
+});
 
 export default function Home() {
   const [testyIndex, setTesyIndex] = useState(0);
   return (
     <section id="Home">
       <Head>
-        <title>{companyName} | Home </title>
-        <meta
-          name="description"
-          content={companyName + " | " + abContent}
-          key="desc"
-        />
+        <title>{`${companyName} | Home`}</title>
+        <meta name="description" content={companyName + " | " + abContent} />
       </Head>
-      <section
-        className="main"
-        style={{ backgroundImage: `url("${yearsOfExpBackground}")` }}
-      >
+      <section className="main" style={{ backgroundImage: `url("${yearsOfExpBackground}")` }}>
         <span className="overlay"></span>
         <span>{place}</span>
         <h1>{main}</h1>
@@ -61,39 +58,7 @@ export default function Home() {
         <span>{projectSubHead}</span>
         <div className="projects-container">
           {projects.slice(0, 6).map((proj, index) => {
-            return (
-              <div className="project-card" key={index}>
-                <div className="img-container">
-                  <Image
-                    src={proj.imgUrl}
-                    fill
-                    sizes="100%"
-                    alt={proj.projectName}
-                  />
-                </div>
-                <div className="stuff-container">
-                  <span>{proj.projectYear}</span>
-                  <Link
-                    className="heading"
-                    href={`/projects/${proj.projectName
-                      .toLowerCase()
-                      .replaceAll(" ", "-")}`}
-                  >
-                    {proj.projectName}
-                  </Link>
-                  <p>{proj.projectDesc}</p>
-                  <Link
-                    className="link-tag"
-                    href={`/projects/${proj.projectName
-                      .toLowerCase()
-                      .replaceAll(" ", "-")}`}
-                  >
-                    <span>READ</span>
-                    <HiArrowLongRight className="arrow" />
-                  </Link>
-                </div>
-              </div>
-            );
+            return <ProjectCard proj={proj} key={String(index)} />;
           })}
         </div>
       </section>
@@ -121,7 +86,7 @@ export default function Home() {
               className="overflow-container"
               style={{
                 height: `${testimonials.length * 30}vh`,
-                transform: `translateY(-${testyIndex * 30}vh)`,
+                transform: `translateY(-${testyIndex * 30}vh)`
               }}
             >
               {testimonials.map((test, index) => {
@@ -129,7 +94,7 @@ export default function Home() {
                   <div
                     key={index}
                     style={{
-                      height: `${100 / testimonials.length}%`,
+                      height: `${100 / testimonials.length}%`
                     }}
                   >
                     <span>
