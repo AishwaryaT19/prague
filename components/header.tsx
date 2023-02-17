@@ -12,7 +12,7 @@ export default function Header() {
   const currentRoute = router.asPath as string;
   const headerRef = useRef<any>();
   const scrollCallback = useCallback((scrollPos: number) => {
-    if (scrollPos > 75 || currentRoute.startsWith("/projects")) {
+    if (scrollPos > 75) {
       (headerRef.current as HTMLElement).classList.add("dark");
       (headerRef.current as HTMLElement).classList.remove("light");
     } else {
@@ -22,6 +22,10 @@ export default function Header() {
   }, []);
 
   useScrollPosition(scrollCallback);
+  if (currentRoute.startsWith("/projects")) {
+    (headerRef.current as HTMLElement).classList.add("dark");
+    (headerRef.current as HTMLElement).classList.remove("light");
+  }
   return (
     <header id="header" className="light" ref={headerRef}>
       <Link className="img-container" href="/">
