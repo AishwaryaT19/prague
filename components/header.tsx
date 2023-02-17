@@ -13,7 +13,7 @@ export default function Header() {
   const headerRef = useRef<any>();
   const scrollCallback = useCallback((scrollPos: number) => {
     //  currentRoute.startsWith("/projects")
-    if (scrollPos > 75) {
+    if (scrollPos > 75 || currentRoute.startsWith("/projects")) {
       (headerRef.current as HTMLElement).classList.add("dark");
       (headerRef.current as HTMLElement).classList.remove("light");
     } else {
