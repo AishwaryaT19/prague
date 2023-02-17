@@ -22,10 +22,6 @@ export default function Header() {
   }, []);
 
   useScrollPosition(scrollCallback);
-  if (currentRoute.startsWith("/projects")) {
-    (headerRef.current as HTMLElement).classList.add("dark");
-    (headerRef.current as HTMLElement).classList.remove("light");
-  }
   return (
     <header id="header" className="light" ref={headerRef}>
       <Link className="img-container" href="/">
