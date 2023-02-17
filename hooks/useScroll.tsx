@@ -1,10 +1,10 @@
 import { useEffect, useCallback } from "react";
 
-export default function useScrollPosition(callback: (sp:number)=>void) {
-  const handleScroll = useCallback(()=>{
+export default function useScrollPosition(callback: (sp: number) => void) {
+  const handleScroll = useCallback(() => {
     const a = window.scrollY;
-    callback(a)
-  },[callback])
+    callback(a);
+  }, [callback]);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
